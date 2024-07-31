@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
   populateSelectOption();
   showDataBelanjaan();
+
+  // Inisialisasi Select2 pada elemen <select>
+  $('#listBarangKasir').select2();
 });
 
 function populateSelectOption() {
@@ -10,6 +13,9 @@ function populateSelectOption() {
   listBarangKasir.innerHTML = barangList.map((barang, index) => `
     <option value="${index}">${barang.namaBarang}</option>
   `).join('');
+
+  // Re-inisialisasi Select2 setelah mengisi opsi
+  $('#listBarangKasir').select2();
 }
 
 function showDataBelanjaan() {
@@ -55,6 +61,7 @@ function addBelanjaan() {
     belanjaanList.push(newBelanjaan);
     localStorage.setItem('belanjaanList', JSON.stringify(belanjaanList));
     showDataBelanjaan();
+    window.location.reload();
   } else {
     alert('Pilih barang dan masukkan jumlah yang valid.');
   }
