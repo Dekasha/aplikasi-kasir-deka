@@ -6068,12 +6068,12 @@ a.invert-bg-dark:hover, a.invert-bg-dark:focus {
   }
 }
 
-.container-p-y:not([class^=pt-]):not([class*=" pt-"]) {
+/* .container-p-y:not([class^=pt-]):not([class*=" pt-"]) {
   padding-top: 1.625rem !important;
 }
 .container-p-y:not([class^=pb-]):not([class*=" pb-"]) {
   padding-bottom: 1.625rem !important;
-}
+} */
 
 .container-m-ny:not([class^=mt-]):not([class*=" mt-"]) {
   margin-top: -1.625rem !important;

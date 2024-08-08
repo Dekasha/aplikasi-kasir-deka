@@ -42,52 +42,6 @@
   <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
   <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
   <script src="assets/js/config.js"></script>
-
-  <style>
-    .container {
-      margin-top: 20px;
-    }
-
-    .card {
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s;
-      position: relative;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card-img-top {
-      height: 200px;
-      object-fit: cover;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .card-body {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .card-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    .card-text {
-      font-size: 1rem;
-      color: #555;
-    }
-
-    .stretched-link {
-      text-decoration: none;
-      color: inherit;
-    }
-  </style>
 </head>
 
 <body>
@@ -133,18 +87,15 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <form id="loginForm">
                 <form>
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                    <div id="emailError" class="form-text" style="color: red;"></div>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" required>
-                    <div id="passwordError" class="form-text" style="color: red;"></div>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
                   </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
@@ -160,8 +111,34 @@
         <div class="content-wrapper">
           <!-- Content -->
           <div class="container-fluid">
-            <div class="row" id="cardContainer">
-              <!-- Cards will be dynamically added here -->
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="card-title">Keranjang</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-hover table-bordered">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Barang</th>
+                            <th>Harga</th>
+                            <th>Jumlah</th>
+                            <th>Total</th>
+                          </tr>
+                        </thead>
+                        <tbody id="dataKeranjang">
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn btn-primary">Checkout</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <!-- / Content -->
@@ -213,7 +190,7 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 
   <!-- main js -->
-  <script src="user.js"></script>
+  <script src="keranjang.js"></script>
 </body>
 
 </html>

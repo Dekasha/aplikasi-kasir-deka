@@ -42,8 +42,7 @@
   <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
   <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
   <script src="assets/js/config.js"></script>
-
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="login.js"></script>
 </head>
 
 <body>
@@ -111,18 +110,18 @@
 
         <ul class="menu-inner py-1">
           <!-- Dashboard -->
-          <li class="menu-item">
+          <li class="menu-item active">
             <a href="admin.html" class="menu-link">
               <i class="menu-icon tf-icons bx bxs-home-circle"></i>
               <div data-i18n="Analytics">Dashboard</div>
             </a>
           </li>
-          <li class="menu-item active">
+          <!-- <li class="menu-item">
             <a href="kasir.html" class="menu-link">
               <i class="menu-icon tf-icons bx bxs-cart-add"></i>
               <div data-i18n="Analytics">Kasir</div>
             </a>
-          </li>
+          </li> -->
           <li class="menu-item">
             <a href="barang.html" class="menu-link">
               <i class="menu-icon tf-icons bx bxs-box"></i>
@@ -138,7 +137,7 @@
         <!-- Navbar -->
 
         <nav
-          class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme mb-3"
+          class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
           id="layout-navbar">
           <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
             <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
@@ -147,7 +146,6 @@
           </div>
 
           <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-            <h4 class="mt-3">Web Aplikasi Kasir</h4>
             <ul class="navbar-nav flex-row align-items-center ms-auto">
 
               <!-- User -->
@@ -185,47 +183,15 @@
         <!-- Content wrapper -->
         <div class="content-wrapper">
           <!-- Content -->
-
           <div class="container-xxl flex-grow-1 container-p-y">
-            <div class="row">
-              <div class="col-md-8 mt-md-0 mt-3 order-2 order-md-1">
-                <div class="card">
-                  <h5 class="card-header">Kasir</h5>
-                  <div class="table-responsive text-nowrap">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>Nama Barang</th>
-                          <th>Harga Barang</th>
-                          <th>Jumlah Barang</th>
-                          <th>Actions</th>
-                        </tr>
-                      </thead>
-                      <tbody class="table-border-bottom-0" id="dataBelanjaan">
-                      </tbody>
-                      <tfoot>
-                        <tr>
-                          <td colspan="2"><strong>Total</strong></td>
-                          <td id="totalHarga">0</td>
-                          <td></td>
-                        </tr>
-                      </tfoot>
-                    </table>
-                  </div>
-                </div>
+            <div class="d-flex flex-column align-items-center justify-content-between">
+              <div class="d-flex align-items-center">
+                <img src="assets/svg/home.svg" class="animated d-none d-sm-block" alt="" width="500">
+                <img src="assets/svg/home.svg" class="animated d-block d-sm-none" alt="" width="300">
               </div>
-              <div class="col-md-4 order-1 order-md-2">
-                <div class="card">
-                  <div class="card-body">
-                    <h6>Tambah Belanjaan</h6>
-                    <select name="listBarangKasir" id="listBarangKasir" class="form-select mt-3">
-                      <!-- Options will be populated by JavaScript -->
-                    </select>
-                    <input type="number" name="jmlBarangKasir" id="jmlBarangKasir" class="form-control mt-3"
-                      placeholder="Jumlah Barang">
-                    <button type="button" class="btn btn-success mt-3" onclick="addBelanjaan()">Tambah ke Kasir</button>
-                  </div>
-                </div>
+              <div class="d-flex flex-column">
+                <h1 class="d-none d-sm-block">Selamat Datang Admin</h1>
+                <h3 class="d-block d-sm-none">Selamat Datang Admin</h3>
               </div>
             </div>
           </div>
@@ -255,9 +221,8 @@
     <div class="layout-overlay layout-menu-toggle"></div>
   </div>
   <!-- / Layout wrapper -->
-  <!-- Custom JS -->
-  <script src="kasir.js"></script>
-
+  <script
+    type='text/javascript'>document.addEventListener('DOMContentLoaded', function () { window.setTimeout(document.querySelector('svg').classList.add('animated'), 2000); })</script>
   <!-- Core JS -->
   <!-- build:js assets/vendor/js/core.js -->
   <script src="assets/vendor/libs/jquery/jquery.js"></script>
@@ -279,9 +244,6 @@
 
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
-
-  <!-- Select2 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </body>
 
 </html>

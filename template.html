@@ -42,8 +42,6 @@
   <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
   <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
   <script src="assets/js/config.js"></script>
-
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -109,125 +107,14 @@
 
         <div class="menu-inner-shadow"></div>
 
-        <ul class="menu-inner py-1">
-          <!-- Dashboard -->
-          <li class="menu-item">
-            <a href="admin.html" class="menu-link">
-              <i class="menu-icon tf-icons bx bxs-home-circle"></i>
-              <div data-i18n="Analytics">Dashboard</div>
-            </a>
-          </li>
-          <li class="menu-item active">
-            <a href="kasir.html" class="menu-link">
-              <i class="menu-icon tf-icons bx bxs-cart-add"></i>
-              <div data-i18n="Analytics">Kasir</div>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a href="barang.html" class="menu-link">
-              <i class="menu-icon tf-icons bx bxs-box"></i>
-              <div data-i18n="Analytics">Data Barang</div>
-            </a>
-          </li>
-        </ul>
-      </aside>
-      <!-- / Menu -->
-
       <!-- Layout container -->
       <div class="layout-page">
-        <!-- Navbar -->
-
-        <nav
-          class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme mb-3"
-          id="layout-navbar">
-          <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
-            <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
-              <i class="bx bx-menu bx-sm"></i>
-            </a>
-          </div>
-
-          <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-            <h4 class="mt-3">Web Aplikasi Kasir</h4>
-            <ul class="navbar-nav flex-row align-items-center ms-auto">
-
-              <!-- User -->
-              <li class="nav-item navbar-dropdown dropdown-user dropdown">
-                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                  <div class="avatar avatar-online">
-                    <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                  </div>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <div class="d-flex">
-                        <div class="flex-shrink-0 me-3">
-                          <div class="avatar avatar-online">
-                            <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                          </div>
-                        </div>
-                        <div class="flex-grow-1">
-                          <span class="fw-semibold d-block">Deka</span>
-                          <small class="text-muted">Admin</small>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <!--/ User -->
-            </ul>
-          </div>
-        </nav>
-
-        <!-- / Navbar -->
 
         <!-- Content wrapper -->
         <div class="content-wrapper">
           <!-- Content -->
-
           <div class="container-xxl flex-grow-1 container-p-y">
-            <div class="row">
-              <div class="col-md-8 mt-md-0 mt-3 order-2 order-md-1">
-                <div class="card">
-                  <h5 class="card-header">Kasir</h5>
-                  <div class="table-responsive text-nowrap">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>Nama Barang</th>
-                          <th>Harga Barang</th>
-                          <th>Jumlah Barang</th>
-                          <th>Actions</th>
-                        </tr>
-                      </thead>
-                      <tbody class="table-border-bottom-0" id="dataBelanjaan">
-                      </tbody>
-                      <tfoot>
-                        <tr>
-                          <td colspan="2"><strong>Total</strong></td>
-                          <td id="totalHarga">0</td>
-                          <td></td>
-                        </tr>
-                      </tfoot>
-                    </table>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 order-1 order-md-2">
-                <div class="card">
-                  <div class="card-body">
-                    <h6>Tambah Belanjaan</h6>
-                    <select name="listBarangKasir" id="listBarangKasir" class="form-select mt-3">
-                      <!-- Options will be populated by JavaScript -->
-                    </select>
-                    <input type="number" name="jmlBarangKasir" id="jmlBarangKasir" class="form-control mt-3"
-                      placeholder="Jumlah Barang">
-                    <button type="button" class="btn btn-success mt-3" onclick="addBelanjaan()">Tambah ke Kasir</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
           </div>
           <!-- / Content -->
 
@@ -255,9 +142,6 @@
     <div class="layout-overlay layout-menu-toggle"></div>
   </div>
   <!-- / Layout wrapper -->
-  <!-- Custom JS -->
-  <script src="kasir.js"></script>
-
   <!-- Core JS -->
   <!-- build:js assets/vendor/js/core.js -->
   <script src="assets/vendor/libs/jquery/jquery.js"></script>
@@ -279,9 +163,6 @@
 
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
-
-  <!-- Select2 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </body>
 
 </html>
